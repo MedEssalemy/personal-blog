@@ -1,6 +1,11 @@
+import fs from "fs";
+import path from "path";
 import satori from "satori";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
+
+const profileImagePath = path.resolve("public/profile.png");
+const profileImageBase64 = `data:image/png;base64,${fs.readFileSync(profileImagePath).toString("base64")}`;
 
 export default async post => {
   return satori(
@@ -61,25 +66,48 @@ export default async post => {
                       props: {
                         style: {
                           display: "flex",
+                          alignItems: "center",
                           justifyContent: "space-between",
                           width: "100%",
                           fontSize: 24,
                         },
                         children: [
                           {
-                            type: "span",
+                            type: "div",
                             props: {
-                              style: { color: "#94a3b8" },
-                              children: post.data.author ?? SITE.author,
+                              style: {
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "16px",
+                              },
+                              children: [
+                                {
+                                  type: "img",
+                                  props: {
+                                    src: profileImageBase64,
+                                    style: {
+                                      width: "52px",
+                                      height: "52px",
+                                      borderRadius: "50%",
+                                      objectFit: "cover",
+                                      border: "2px solid #334155",
+                                    },
+                                  },
+                                },
+                                {
+                                  type: "span",
+                                  props: {
+                                    style: { color: "#94a3b8" },
+                                    children: post.data.author ?? SITE.author,
+                                  },
+                                },
+                              ],
                             },
                           },
                           {
                             type: "span",
                             props: {
-                              style: {
-                                fontWeight: "bold",
-                                color: "#64748b",
-                              },
+                              style: { color: "#64748b" },
                               children: SITE.title,
                             },
                           },

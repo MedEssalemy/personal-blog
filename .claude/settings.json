@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('/c/Users/EliteBook/Documents/personal-blog/public/profile.png'\\);console.log\\('data:image/png;base64,'+b.toString\\('base64'\\)\\);\")",
+      "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\EliteBook\\\\\\\\\\\\\\\\Documents\\\\\\\\\\\\\\\\personal-blog\\\\\\\\\\\\\\\\public\\\\\\\\\\\\\\\\profile.png'\\);console.log\\(b.toString\\('base64'\\).length\\);\")",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog commit -m ':*)"
+    ]
+  }
+}

@@ -1,6 +1,11 @@
+import fs from "fs";
+import path from "path";
 import satori from "satori";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
+
+const profileImagePath = path.resolve("public/profile.png");
+const profileImageBase64 = `data:image/png;base64,${fs.readFileSync(profileImagePath).toString("base64")}`;
 
 export default async () => {
   return satori(
@@ -24,92 +29,103 @@ export default async () => {
                 background: "#0f172a",
                 borderRadius: "12px",
                 display: "flex",
-                justifyContent: "center",
+                alignItems: "center",
                 margin: "2rem",
                 width: "88%",
                 height: "80%",
+                padding: "40px",
+                gap: "48px",
               },
-              children: {
-                type: "div",
-                props: {
-                  style: {
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    margin: "40px",
-                    width: "90%",
-                    height: "85%",
+              children: [
+                {
+                  type: "img",
+                  props: {
+                    src: profileImageBase64,
+                    style: {
+                      width: "180px",
+                      height: "180px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      flexShrink: 0,
+                      border: "3px solid #334155",
+                    },
                   },
-                  children: [
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "center",
-                          height: "90%",
-                          maxHeight: "90%",
-                          overflow: "hidden",
-                        },
-                        children: [
-                          {
-                            type: "p",
-                            props: {
-                              style: {
-                                fontSize: 72,
-                                fontWeight: "bold",
-                                color: "#e2e8f0",
-                                margin: 0,
-                              },
-                              children: SITE.title,
-                            },
-                          },
-                          {
-                            type: "p",
-                            props: {
-                              style: {
-                                fontSize: 28,
-                                color: "#94a3b8",
-                                marginTop: "12px",
-                                lineHeight: 1.4,
-                              },
-                              children: SITE.desc,
-                            },
-                          },
-                        ],
-                      },
-                    },
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "100%",
-                          fontSize: 22,
-                          color: "#64748b",
-                        },
-                        children: [
-                          {
-                            type: "span",
-                            props: {
-                              children: SITE.author,
-                            },
-                          },
-                          {
-                            type: "span",
-                            props: {
-                              style: { fontWeight: "bold", color: "#94a3b8" },
-                              children: new URL(SITE.website).hostname,
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
                 },
-              },
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      height: "100%",
+                      flex: 1,
+                    },
+                    children: [
+                      {
+                        type: "div",
+                        props: {
+                          style: { display: "flex", flexDirection: "column" },
+                          children: [
+                            {
+                              type: "p",
+                              props: {
+                                style: {
+                                  fontSize: 68,
+                                  fontWeight: "bold",
+                                  color: "#e2e8f0",
+                                  margin: 0,
+                                  lineHeight: 1.1,
+                                },
+                                children: SITE.title,
+                              },
+                            },
+                            {
+                              type: "p",
+                              props: {
+                                style: {
+                                  fontSize: 26,
+                                  color: "#94a3b8",
+                                  marginTop: "16px",
+                                  lineHeight: 1.4,
+                                },
+                                children: SITE.desc,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                            fontSize: 22,
+                          },
+                          children: [
+                            {
+                              type: "span",
+                              props: {
+                                style: { color: "#94a3b8" },
+                                children: SITE.author,
+                              },
+                            },
+                            {
+                              type: "span",
+                              props: {
+                                style: { color: "#64748b" },
+                                children: new URL(SITE.website).hostname,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
             },
           },
         ],
