@@ -1,0 +1,23 @@
+export const SITE = {
+  website: "https://7345562a.personal-blog-8ts.pages.dev/",
+  author: "Mohamed Es-salemy",
+  profile: "https://www.linkedin.com/in/essalemy/",
+  desc: "Personal blog by Mohamed Es-salemy — Project Management, Excel Automation, and Technical Solutions.",
+  title: "Essalemy",
+  ogImage: "astropaper-og.jpg",
+  lightAndDarkMode: true,
+  postPerIndex: 5,
+  postPerPage: 5,
+  scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: true,
+  showBackButton: true,
+  editPost: {
+    enabled: true,
+    text: "Suggest Changes",
+    url: "https://github.com/MedEssalemy/personal-blog/edit/main/src/data/blog/",
+  },
+  dynamicOgImage: true,
+  dir: "ltr",
+  lang: "en",
+  timezone: "Europe/Paris",
+} as const;

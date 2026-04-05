@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm:*)",
+      "Bash(hugo --gc --minify)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog status)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog add hugo.yaml static/images/profile.png assets/ content/ layouts/)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog commit -m ':*)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog remote add origin https://github.com/MedEssalemy/personal-blog.git)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog add README.md)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog push -u origin master)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog branch -m master main)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog push -u origin main)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog pull origin main --allow-unrelated-histories --no-edit)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog push origin main --force)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog push origin --delete master)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog ls-tree -r HEAD --name-only)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog ls-tree HEAD themes/PaperMod)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog submodule update --init --recursive)",
+      "Bash(git submodule:*)",
+      "Bash(rm -rf .git/modules/themes/PaperMod)",
+      "Bash(git clone:*)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog add themes/PaperMod .gitmodules)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog status --short)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog push origin main)",
+      "Bash(npm --version)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(./node_modules/.bin/astro build:*)",
+      "Bash(git -C /c/Users/EliteBook/Documents/personal-blog add -A)"
+    ]
+  }
+}
