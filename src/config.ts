@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://www.linkedin.com/in/essalemy/",
   desc: "Personal blog by Mohamed Es-salemy — Project Management, Excel Automation, and Technical Solutions.",
   title: "Essalemy",
-  ogImage: "astropaper-og.jpg",
+  ogImage: undefined,
   lightAndDarkMode: true,
   postPerIndex: 5,
   postPerPage: 5,
