@@ -1,8 +1,8 @@
 export const SITE = {
-  website: "https://7345562a.personal-blog-8ts.pages.dev/",
-  author: "Mohamed Es-salemy",
+  website: "https://essalemy.com/",
+  author: "Mohamed Essalemy",
   profile: "https://www.linkedin.com/in/essalemy/",
-  desc: "Personal blog by Mohamed Es-salemy — Project Management, Excel Automation, and Technical Solutions.",
+  desc: "Documenting how I automate business processes, build practical tools, and solve real operational problems — from Excel and Power Platform to web apps and APIs.",
   title: "Essalemy",
   ogImage: undefined,
   lightAndDarkMode: true,

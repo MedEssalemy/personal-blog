@@ -3,47 +3,35 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I'm an industrial engineer based in Morocco, working at the intersection of data, automation, and business processes.
+I'm a Morocco-based professional working at the intersection of business operations, automation, and practical software.
 
-My background is in Industrial Engineering (ENSA Safi). I started with a focus on operations, data quality, and performance tracking — and gradually moved toward what I enjoy most: building practical tools that simplify work and improve decision-making.
+My core strength: I transform manual and fragmented workflows into structured, automated systems — using tools that are already available inside organizations or building lightweight ones from scratch.
 
 ## What I Do
 
-I work as a **Reporting & Process Automation Consultant at ALTEN Maroc**, contributing to projects for Stellantis.
+**Automation in enterprise environments**
 
-Day-to-day, that means:
+I design and implement automation solutions using the Microsoft Power Platform and O365 ecosystem: Power Automate for workflows and data pipelines, Power Apps for internal tools, SharePoint and Excel Online as integrated process layers. The approach is always the same — understand the need, use available tools, deliver something working and maintainable.
 
-- Automating reporting processes with Excel, VBA, and Power Query
-- Building tools to track project cost performance
-- Cleaning and structuring data to make it usable
-- Translating team needs into simple, workable solutions
+**Freelance and independent work**
 
-Most of what I build is not fancy tech — it's practical systems that save time and reduce manual work.
+I help small teams and businesses reduce manual work, structure their processes, and build simple internal tools. The stack depends on the need: Excel and VBA when that's the right fit, web apps with Next.js and a database when something more connected is needed, or lightweight automation in between.
 
-## My Approach
+**Technical projects**
 
-I'm somewhere between developer and business profile — and I prefer it that way.
+I build systems to solve real problems and test ideas: internal dashboards, AI-assisted processing tools, API-based services, and IoT systems. These are always built with real constraints in mind — limited infrastructure, actual usage scenarios, simple deployment.
 
-I focus on understanding the real problem before building anything, keeping solutions simple and maintainable, and delivering usable results rather than overengineering. A big part of my work is talking to users, understanding constraints, and adapting tools to real workflows, not ideal ones.
+**Products and SaaS**
 
-## Side Projects
+I'm moving toward repeatable, scalable solutions. This includes web-based tools for business process automation across areas like sales tracking, finance, and project management — and Excel-based products like templates and automation kits.
 
-Outside my main role, I explore:
+## How I Work
 
-- **Freelance** — Excel/VBA automation and business tools
-- **Web apps** — small applications with Next.js, APIs, and simple SaaS ideas
-- **AI use cases** — practical applications, not theoretical ones
-- **Real estate tools** — tracking and reporting systems
+I prioritize tools already available in the organization before introducing new ones. A simple solution used by everyone beats a complex one used by no one. I work directly with users, not just specifications — and I focus on delivering value early and improving over time.
 
-I'm interested in turning some of these into small structured products, but I approach it step by step.
+## This Blog
 
-## How I Think About Work
-
-I don't aim to build the next big startup or overcomplicate things.
-
-What matters: building useful tools, solving real operational problems, and creating systems that people actually use.
-
-Simple ideas, executed well, with real impact.
+This is where I document my learning path. Not polished theory — just what I actually built, the problems I ran into, and how I solved them.
 
 ---
 
