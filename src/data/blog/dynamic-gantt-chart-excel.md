@@ -3,14 +3,12 @@ title: "Building an Advanced Dynamic Gantt Chart in Excel (Multi-Date & Reschedu
 pubDatetime: 2026-02-15T00:00:00Z
 modDatetime: 2026-02-15T00:00:00Z
 slug: dynamic-gantt-chart-excel
-featured: true
+featured: false
 draft: false
 author: "Mohamed Es-salemy"
 tags:
-  - Excel
   - Project Management
   - Gantt Chart
-  - Automation
   - Planning
 description: "How to build a fully dynamic Excel Gantt Chart that supports multi-date tasks, multi-duration logic, rescheduling, baseline tracking, and milestone automation."
 ---

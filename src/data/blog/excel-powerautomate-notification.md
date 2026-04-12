@@ -3,22 +3,27 @@ title: "Excel + Power Automate: Get Email Notifications When Your Shared File Ch
 pubDatetime: 2026-04-12T00:00:00Z
 modDatetime: 2026-04-12T00:00:00Z
 slug: excel-powerautomate-notification
-featured: false
+featured: true
 draft: false
 author: "Mohamed Es-salemy"
 tags:
-  - Excel
   - Power Automate
-  - VBA
-  - SharePoint
   - Automation
-  - O365
+
 description: "Learn how to build a zero-cost automated notification system that sends an email every time something happens in your shared Excel file — using VBA, SharePoint REST API, and Power Automate with only an O365 license."
 ---
 
 ## Demo Video
 
-[Watch the full demo on YouTube](https://www.youtube.com/watch?v=ISczlCit3y4)
+<iframe
+  width="100%"
+  style="aspect-ratio: 16/9;"
+  src="https://www.youtube.com/embed/ISczlCit3y4"
+  title="Get Email Notifications When Your Shared File Changes"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 
 ---
 
@@ -53,11 +58,11 @@ This solution works with a **standard O365 license** only — no premium connect
 
 The architecture relies on three components that are already available to you:
 
-| Component | Role |
-|---|---|
-| **Excel VBA** | Detects the event and sends data |
-| **SharePoint List** | Acts as the trigger point |
-| **Power Automate** | Listens and sends the email |
+| Component           | Role                             |
+| ------------------- | -------------------------------- |
+| **Excel VBA**       | Detects the event and sends data |
+| **SharePoint List** | Acts as the trigger point        |
+| **Power Automate**  | Listens and sends the email      |
 
 The SharePoint List connector in Power Automate is available on standard O365 plans, which makes this entire flow free to run.
 
@@ -336,12 +341,12 @@ End Function
 
 The module is split into a **configuration zone** (everything above the `ENGINE` divider) and an **engine zone** (everything below it). You only ever touch the configuration zone.
 
-| What | Where in the module |
-|---|---|
-| `SP_SITE_URL` | `Private Const` at the top — your SharePoint site URL |
-| `SP_LIST_NAME` | `Private Const` at the top — your list name |
-| `GetTitle()` | Return the value you want in the **Title** column |
-| `GetBody()` | Return the value you want in the **Body** column |
+| What           | Where in the module                                        |
+| -------------- | ---------------------------------------------------------- |
+| `SP_SITE_URL`  | `Private Const` at the top — your SharePoint site URL      |
+| `SP_LIST_NAME` | `Private Const` at the top — your list name                |
+| `GetTitle()`   | Return the value you want in the **Title** column          |
+| `GetBody()`    | Return the value you want in the **Body** column           |
 | `GetFileURL()` | Returns the workbook path by default — customize if needed |
 
 ### Adding a New Column
@@ -433,14 +438,14 @@ The flow is now live. Every new item added to your SharePoint list will trigger 
 
 ## Recap: The Only Things You Need to Change
 
-| Setting | Location |
-|---|---|
-| `SP_SITE_URL` constant | Top of the VBA module |
-| `SP_LIST_NAME` constant | Top of the VBA module |
+| Setting                    | Location                                     |
+| -------------------------- | -------------------------------------------- |
+| `SP_SITE_URL` constant     | Top of the VBA module                        |
+| `SP_LIST_NAME` constant    | Top of the VBA module                        |
 | `GetTitle()` / `GetBody()` | Data source functions — read from your sheet |
-| SharePoint Site URL | Power Automate flow trigger |
-| SharePoint List Name | Power Automate flow trigger |
-| Recipient name & email | Power Automate send email action |
+| SharePoint Site URL        | Power Automate flow trigger                  |
+| SharePoint List Name       | Power Automate flow trigger                  |
+| Recipient name & email     | Power Automate send email action             |
 
 Everything else is reusable as-is.
 
@@ -450,7 +455,7 @@ Everything else is reusable as-is.
 
 The key is using the **SharePoint List** as the intermediary.
 
-Power Automate's *"When an item is created"* trigger for SharePoint is part of the **standard connector set**, included in every Microsoft 365 plan. There is no need for premium connectors, no Dataverse, no extra licensing.
+Power Automate's _"When an item is created"_ trigger for SharePoint is part of the **standard connector set**, included in every Microsoft 365 plan. There is no need for premium connectors, no Dataverse, no extra licensing.
 
 VBA handles the write operation directly via the SharePoint REST API — which any authenticated Office session can access — so there is no need for a gateway or additional middleware either.
 
