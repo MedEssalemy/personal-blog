@@ -5,7 +5,7 @@ modDatetime: 2026-04-12T00:00:00Z
 slug: excel-powerautomate-notification
 featured: true
 draft: false
-ogImage: /assets/excel-powerautomate-og.jpg
+ogImage: https://essalemy.com/assets/excel-powerautomate-og.jpg
 author: "Mohamed Es-salemy"
 tags:
   - Power Automate
